@@ -15,7 +15,7 @@ const QuoteDetail = () => {
     const {sendRequest: getQuoteById, data: quote, status, error} = useHttp(getSingleQuote);
 
     useEffect(() => {
-        getQuoteById(quoteId)
+        getQuoteById(quoteId);
     }, [getQuoteById]);
 
     if (status === 'pending') {
